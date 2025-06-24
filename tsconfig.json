@@ -1,64 +1,26 @@
 {
-  "ts-node": {
-    "include": [
-      "modules",
-      "test/modules"
-    ],
-    // It is faster to skip typechecking. Remove if you want ts-node to do typechecking.
-    "transpileOnly": true
-  },
   "compilerOptions": {
-    "target": "es2022",
-    "module": "es2020",
-    "jsx": "react",
-    // "strict": true,
-    "noImplicitAny": false,
+    "target": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
-    "checkJs": false,
-    "moduleResolution": "node",
+    "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "Bundler",
     "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@hubble.gl/core": ["modules/core/src"],
-      "hubble.gl": ["modules/main/src"],
-      "@hubble.gl/react": ["modules/react/src"],
-
-      "hubble.gl-test/*": ["test/*"]
-    },
-    "typeRoots" : ["./node_modules/@types"],
-    "plugins": [
-      {
-        "transform": "@vis.gl/ts-plugins/ts-transform-version-inline"
-      },
-      {
-        "transform": "@vis.gl/ts-plugins/ts-transform-remove-glsl-comments",
-        "pattern": ["**/*.glsl.ts"]
-      },
-      {
-        "transform": "@vis.gl/ts-plugins/ts-transform-inline-webgl-constants"
-      },
-      {
-        "transform": "@vis.gl/ts-plugins/ts-transform-append-extension",
-        "extensions": [".js", ".glsl.js"],
-        "after": true
-      },
-      {
-        "transform": "@vis.gl/ts-plugins/ts-transform-append-extension",
-        "extensions": [".js", ".glsl.js"],
-        "afterDeclarations": true
-      }
-    ]
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx"
   },
   "include": [
-    "modules",
-    "test",
-    "examples"
-  ],
-  "exclude": [
-    "**/node_modules",
-    "**/dist"
+    "src"
   ]
 }

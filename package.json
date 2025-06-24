@@ -1,70 +1,79 @@
 {
-  "name": "hubble.gl-monorepo",
-  "license": "MIT",
+  "name": "timeline-hero",
+  "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Hubble.gl is a powerful open source animation tool for large-scale data sets.",
-  "author": "Chris Gervang <chris@gervang.com>",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/visgl/hubble.gl.git"
+  "dependencies": {
+    "@luma.gl/core": "8",
+    "@luma.gl/webgl": "8",
+    "@mapbox/polyline": "^1.2.0",
+    "@theatre/core": "0.7.2",
+    "@theatre/react": "0.7.2",
+    "@theatre/studio": "0.7.2",
+    "@types/suncalc": "^1.9.1",
+    "@vitejs/plugin-react": "^4.0.0",
+    "classnames": "^2.5.1",
+    "d3": "^7.9.0",
+    "deck.gl": "8.9.35",
+    "haversine-distance": "^1.2.1",
+    "maplibre-gl": "^4.7.1",
+    "mp4-muxer": "^5.2.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-map-gl": "^7.1.7",
+    "rxjs": "^7.8.1",
+    "suncalc": "^1.9.0",
+    "web-vitals": "^2.1.0"
   },
-  "workspaces": [
-    "modules/*"
-  ],
-  "scripts": {
-    "bootstrap": "yarn && ocular-bootstrap && npm run build",
-    "build": "ocular-clean && ocular-build",
-    "lint": "ocular-lint",
-    "cover": "ocular-test cover",
-    "publish-beta": "ocular-publish version-only-beta",
-    "publish-prod": "ocular-publish version-only-prod",
-    "test": "ocular-test",
-    "test-fast": "ocular-lint && ocular-test browser-headless",
-    "metrics": "ocular-metrics",
-    "update-release-branch": "scripts/update-release-branch.sh"
-  },
-  "browser": {
-    "jsdom": false
-  },
-  "keywords": [
-    "webgl",
-    "visualization",
-    "vis.gl",
-    "deck.gl",
-    "kepler.gl",
-    "video"
-  ],
-  "devDependencies": {
-    "@loaders.gl/polyfills": "^4.2.0",
-    "@luma.gl/experimental": "^8.5.0",
-    "@probe.gl/bench": "^4.1.0",
-    "@probe.gl/test-utils": "^4.1.0",
-    "@vis.gl/dev-tools": "1.0.0",
-    "@vis.gl/ts-plugins": "1.0.0",
-    "coveralls": "^3.0.0",
-    "jsdom": "^20.0.0",
-    "pre-commit": "^1.2.2",
-    "puppeteer": "24.2.0",
-    "tap-spec": "^5.0.0",
-    "tape-catch": "^1.0.6"
-  },
-  "resolutions_comments": [
-    "@luma.gl/experimental: must include in devDeps for local dev examples"
-  ],
   "resolutions": {
-    "@luma.gl/experimental": "8.5.21",
-    "@probe.gl/log": "4.1.0",
-    "@probe.gl/env": "4.1.0",
-    "@probe.gl/stats": "4.1.0",
-    "@probe.gl/test-utils": "4.1.0"
+    "@luma.gl/core": "8.5.21",
+    "@luma.gl/engine": "8.5.21",
+    "@luma.gl/webgl": "8.5.21"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "NODE_ENV=development vite build",
+    "serve": "vite preview",
+    "test": "vitest",
+    "lint": "biome lint ./src/**/*.{ts,tsx}",
+    "fix-lint": "biome check --write --unsafe ./src/**/*.{ts,tsx}"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.5",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/d3": "^7.4.3",
+    "@types/jest": "30.0.0",
+    "@types/node": "24.0.3",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitest/browser": "^3.2.3",
+    "playwright": "^1.50.1",
+    "pre-commit": "^1.2.2",
+    "type-fest": "^4.12.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.3.5",
+    "vite-plugin-node-polyfills": "^0.23.0",
+    "vitest": "^3.2.3"
   },
   "pre-commit": [
-    "test-fast"
   ],
   "volta": {
-    "node": "18.20.5",
-    "yarn": "4.5.2"
+    "node": "22.11.0",
+    "yarn": "4.5.3"
   },
-  "packageManager": "yarn@4.5.2"
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

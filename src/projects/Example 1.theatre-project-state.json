@@ -1,0 +1,75 @@
+{
+  "sheetsById": {
+    "Take 1": {
+      "staticOverrides": {
+        "byObject": {
+          "cameras / map-1": {
+            "pitch": 54.335443037974734,
+            "latitude": 36.646745600000024,
+            "longitude": -121.81189480000016,
+            "zoom": 13.42025316455696,
+            "bearing": -30
+          },
+          "arcs": {
+            "segmentCount": 150
+          }
+        }
+      },
+      "sequence": {
+        "subUnitsPerUnit": 30,
+        "length": 3.05,
+        "type": "PositionalSequence",
+        "tracksByObject": {
+          "fly": {
+            "trackData": {
+              "oo1CwAT_ZX": {
+                "type": "BasicKeyframedTrack",
+                "__debugName": "fly:[\"time\"]",
+                "keyframes": [
+                  {
+                    "id": "oKKz_krKbK",
+                    "position": 0,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 0
+                  },
+                  {
+                    "id": "8dsOXPwhyN",
+                    "position": 3,
+                    "connectedRight": true,
+                    "handles": [
+                      0.5,
+                      1,
+                      0.5,
+                      0
+                    ],
+                    "type": "bezier",
+                    "value": 300000
+                  }
+                ]
+              }
+            },
+            "trackIdByPropPath": {
+              "[\"time\"]": "oo1CwAT_ZX"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitionVersion": "0.4.0",
+  "revisionHistory": [
+    "BuxbbGkIll1a2M31",
+    "zKiWbxJHffF6GDEf",
+    "Hn99bYh99Ow7dOhv",
+    "G7b7th_1uWbuCvbD",
+    "H-StJPMn6hfZASNs",
+    "GAET8hSl4cZ9F2vy"
+  ]
+}
